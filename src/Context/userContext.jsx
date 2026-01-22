@@ -1,10 +1,10 @@
-import { Children, createContext, useState } from 'react'
+import { children, createContext, useState } from 'react'
 
 //create the context object
 export const UserContext = createContext();
 
 //create a provider
-export const UserProvider = ({Children})=>{
+export const UserProvider = ({children})=>{
     const [user, setUser] = useState({
         name: "Charlene",
         age: 30
@@ -12,7 +12,7 @@ export const UserProvider = ({Children})=>{
 
     return(
         <UserContext.Provider value={user}>
-            {Children}
+            {children}
         </UserContext.Provider>
     );
 };
